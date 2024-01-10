@@ -24,8 +24,13 @@ function returnAnswer() {
         let randomNumber = Math.floor(Math.random() * userComments + 1);
         answerArray.push(randomNumber);
     };
-    if (userComments != "" && userN != "") {
-        document.getElementById("answer").innerHTML = "Your winners are "+ answerArray + "!";
+
+    if (userComments != "" && userN != "" && userN > 1) {
+        let arrayJoin = answerArray.join(", ");
+        document.getElementById("answer").innerHTML = "Your winners are numbers "+ arrayJoin + "!";
+    } else if (userComments != "" && userN != "" && userN <= 1) {
+        let arrayJoin = answerArray.join(", ");
+        document.getElementById("answer").innerHTML = "Your winner is number "+ arrayJoin + "!";
     } else {
         alert("You must answer both prompts!");
     };

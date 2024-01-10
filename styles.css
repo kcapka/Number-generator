@@ -6,8 +6,8 @@
 
 /*
 design items:
-peach = rgb(245,185,138)
-pink = rgb(235,63,116)
+dark purple = rgb(78,65,202)
+purple = rgb(214,52,120)
 
 font-family: 'Nunito', sans-serif; (for titles)
 font-family: 'Poppins', sans-serif; (for text)
@@ -21,23 +21,28 @@ body{
    align-items: center;
     min-height: 100svh;
     font-family: 'Poppins', sans-serif;
-    background-image: linear-gradient(rgb(245,185,138), rgb(235,63,116));
+    background-image: linear-gradient(to right top, rgb(214,52,120), rgb(78,65,202));
 }
 
 .title{
     font-family: 'Nunito', sans-serif;
     font-weight: 700;
     margin-bottom: 30px;
-    font-size: 35px;
-    color: black;
+    text-align: center;
+    font-size: 20px;
+    color: white;
     line-height: 1;
 }
 
 main{
     width: 80%;
-    background-color: pink;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     padding: 20px 30px;
     border-radius: 20px;
+    transition: 0.5s;
+    overflow-x: hidden;
 }
 
 .form{
@@ -45,62 +50,78 @@ main{
     flex-direction: column;
     align-items: center;
     text-align: center;
+    transition: 0.5s;
 }
 
 .form.active{
-    display: none;
+    transform: translateX(1000px);
 }
 
 label{
     font-size: 23px;
     margin-bottom: 15px;
-    color: black;
+    color: white;
     font-weight: 600;
     line-height: 1;
+    display: none;
 }
 
 input{
     margin-bottom: 30px;
-    width: 200px;
+    width: 300px;
     height: 50px;
-    border-radius: 30px;
-    border: solid 1px rgb(233, 39, 97);
+    border-radius: 15px;
+    border: solid 3px white;
     text-align: center;
     font-size: 20px;
+    color: white;
     background-color: transparent;
 }
 
 button{
     width: 300px;
-    height: 75px;
-    border-radius: 40px;
+    height: 60px;
+    border-radius: 15px;
     font-size: 20px;
-    color: white;
+    color: rgb(149,70,149);
     margin-top: 30px;
-    background-image: linear-gradient(rgb(235,63,116), rgb(245,185,138));
-    filter: drop-shadow(0 10px 8px rgb(233, 39, 97));
+    background-color: white;
     border: none;
+    font-weight: 700;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
 }
 
 .answer-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    overflow: scroll;
+    position: absolute;
+    left: 15%;
+    top: 40%;
 }
 
 .answer{
     font-size: 30px;
     max-width: 250px;
+    color: white;
+    text-align: center;
+    max-height: 200px;
+    overflow: scroll;
 }
 
 .reset{
-    display: none;
+    transform: translateX(-1000px);
     filter: none;
-    width: 250px;
+    width: 300px;
+    transition: 0.5s;
 }
 
 .reset.active{
-    display: block;
+    transform: translateX(0);
+}
+
+img{
+    width: 150px;
+    margin-bottom: 30px;
 }
 
