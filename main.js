@@ -25,7 +25,11 @@ function returnAnswer() {
         answerArray.push(randomNumber);
     };
 
-    if (userComments != "" && userN != "" && userN > 1) {
+    if (userN > userComments){
+        alert("Number of winners can't be higher than the number of participants");
+    } else if (userN === userComments) {
+        document.getElementById("answer").innerHTML = "Everybody is a winner!";
+    } else if(userComments != "" && userN != "" && userN > 1) {
         let arrayJoin = answerArray.join(", ");
         document.getElementById("answer").innerHTML = "Your winners are numbers "+ arrayJoin + "!";
     } else if (userComments != "" && userN != "" && userN <= 1) {
