@@ -25,9 +25,7 @@ function returnAnswer() {
         answerArray.push(randomNumber);
     };
 
-    if (userN > userComments){
-        alert("Number of winners can't be higher than the number of participants");
-    } else if (userComments != 0 && userN === "") {
+    if (userComments != "" && userN === "") {
         document.getElementById("answer").innerHTML = "There are no winners! You must type a number of desired winners.";
     } else if(userN === userComments && userComments != "" && userN != "") {
         document.getElementById("answer").innerHTML = "Everybody is a winner!";
