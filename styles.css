@@ -111,7 +111,7 @@ main{
     border-radius: 20px;
     transition: 0.5s;
     overflow-x: hidden;
-    margin-top: 50px;
+    margin-top: 25px;
 }
 
 .form{
@@ -124,6 +124,17 @@ main{
 
 .form.active{
     transform: translateX(1000px);
+}
+
+form p{
+    color: white;
+    font-size: 13px;
+    width: 70%;
+    line-height: 1;
+    margin-bottom: 30px;
+    background-color: rgba(0,0,0,0.2);
+    padding: 10px 5px;
+    border-radius: 10px;
 }
 
 label{
@@ -159,6 +170,7 @@ button{
     font-size: 20px;
     color: rgb(149,70,149);
     margin-top: 15px;
+    margin-bottom: 30px;
     background-color: white;
     border: none;
     font-weight: 700;
