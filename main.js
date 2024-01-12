@@ -31,10 +31,24 @@ function returnAnswer() {
     
     let userN = document.getElementById("winners").value;
 
+
+
+    while (answerArray.length < userN) {
+        const randomNumber = Math.floor(Math.random() * userComments + 1);
+
+        if (!answerArray.includes(randomNumber)) {
+            answerArray.push(randomNumber);
+        }
+
+    }
+
+
+
+    /*
     for (var i = 0; i < userN; i++) {
         let randomNumber = Math.floor(Math.random() * userComments + 1);
         answerArray.push(randomNumber);
-    };
+    }; */
 
     if (userComments != "" && userN === "") {
         document.getElementById("answer").innerHTML = "There are no winners! You must type a number of desired winners.";
@@ -50,7 +64,7 @@ function returnAnswer() {
         alert("You must answer both prompts!");
     } else {
         alert("Something went wrong! Please try again.");
-    };
+    }; 
     
 };
 
