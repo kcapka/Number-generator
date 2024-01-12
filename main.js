@@ -12,9 +12,11 @@ let form = document.querySelector(".form");
 
 
 const hamburger = document.querySelector(".hamburger");
+const navLinks = document.querySelector(".navlinks");
 
 hamburger.addEventListener("click", () => {
     hamburger.classList.toggle("active");
+    navLinks.classList.toggle("active");
 }); 
 
 
