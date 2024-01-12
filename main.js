@@ -6,7 +6,7 @@ let userN = document.getElementById("winners").value
 
 
 let answer = document.querySelector(".answer");
-let reset = document.querySelector(".reset");
+let reset = document.querySelector(".answer-section");
 let submit = document.getElementById("submit");
 let form = document.querySelector(".form");
 
@@ -75,11 +75,13 @@ function resetAnswer() {
 submit.addEventListener("click", () => {
     reset.classList.add("active");
     form.classList.add("active");
+    answer.classList.add("active");
 })
 
 reset.addEventListener("click", () => {
     reset.classList.remove("active");
     form.classList.remove("active");
+    answer.classList.remove("active");
 })
 
 

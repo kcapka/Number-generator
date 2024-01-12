@@ -120,10 +120,12 @@ main{
     align-items: center;
     text-align: center;
     transition: 0.5s;
+    max-height: 800px;
 }
 
 .form.active{
-    transform: translateX(1000px);
+    transform: translatey(-1000px);
+    max-height: 0;
 }
 
 form p{
@@ -175,15 +177,25 @@ button{
     border: none;
     font-weight: 700;
     box-shadow: 5px 5px 5px rgba(0,0,0,0.2);
+    cursor: pointer;
 }
 
 .answer-section{
     display: flex;
     flex-direction: column;
     align-items: center;
-    position: absolute;
-    left: 15%;
-    top: 40%;
+    width: 0;
+    overflow: hidden;
+    transition: 0.5s;
+    justify-self: center;
+    max-height: 0;
+    margin-top: 0;
+}
+
+.answer-section.active{
+    width: 300px;
+    max-height: 200px;
+    margin-top: 25vh;
 }
 
 .answer{
@@ -193,18 +205,21 @@ button{
     text-align: center;
     max-height: 250px;
     overflow: scroll;
+    opacity: 0;
+    transition: 2s;
+}
+
+.answer.active{
+    opacity: 1;
 }
 
 .reset{
-    transform: translateX(-1000px);
     filter: none;
     width: 300px;
     transition: 0.5s;
+    border-radius: 15px;
 }
 
-.reset.active{
-    transform: translateX(0);
-}
 
 img{
     width: 150px;
