@@ -11,6 +11,15 @@ let submit = document.getElementById("submit");
 let form = document.querySelector(".form");
 
 
+const hamburger = document.querySelector(".hamburger");
+
+hamburger.addEventListener("click", () => {
+    hamburger.classList.toggle("active");
+}); 
+
+
+
+
 
 
 function returnAnswer() {
@@ -56,7 +65,6 @@ reset.addEventListener("click", () => {
     reset.classList.remove("active");
     form.classList.remove("active");
 })
-
 
 
 
