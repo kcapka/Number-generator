@@ -194,12 +194,12 @@ button{
 
 .answer-section.active{
     width: 300px;
-    max-height: 200px;
+    max-height: 250px;
     margin-top: 25vh;
 }
 
 .answer{
-    font-size: 30px;
+    font-size: 25px;
     max-width: 250px;
     color: white;
     text-align: center;
